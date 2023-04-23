@@ -1,0 +1,1 @@
+Projeto do backend de ficha para uma versão alternativa de Alther.

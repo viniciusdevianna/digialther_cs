@@ -1,0 +1,110 @@
+[
+    {
+        "model": "tamers.Path",
+        "pk": 1,
+        "fields": {
+            "aspiration": 1,
+            "name": "Monge",
+            "intrinsic": "Uma vez por turno, ao acertar um ataque ou técnica em um oponente, o digimon pode atacar novamente com desvantagem/neutralidade/vantagem/sucesso"
+        }
+    },
+    {
+        "model": "tamers.Path",
+        "pk": 2,
+        "fields": {
+            "aspiration": 1,
+            "name": "Arcante",
+            "intrinsic": "As técnicas do digimon têm tempo de recarga reduzido pela metade e ele gera metade dos PD normais"
+        }
+    },
+    {
+        "model": "tamers.Path",
+        "pk": 3,
+        "fields": {
+            "aspiration": 1,
+            "name": "Shepian",
+            "intrinsic": "O dano espiritual dos shepians é indefensável"
+        }
+    },
+    {
+        "model": "tamers.Path",
+        "pk": 4,
+        "fields": {
+            "aspiration": 1,
+            "name": "Nébulo",
+            "intrinsic": "Se estiverem ocultos ou atacando um oponente com um malefício, causam +10/20/40/120 de dano"
+        }
+    },
+    {
+        "model": "tamers.Path",
+        "pk": 5,
+        "fields": {
+            "aspiration": 2,
+            "name": "Cruzado",
+            "intrinsic": "Ataques com sucesso provocam o oponente por 2 turnos"
+        }
+    },
+    {
+        "model": "tamers.Path",
+        "pk": 6,
+        "fields": {
+            "aspiration": 2,
+            "name": "Druida",
+            "intrinsic": "Ao curar um aliado, o digimon tem 50% de chance de curar novamente"
+        }
+    },
+    {
+        "model": "tamers.Path",
+        "pk": 7,
+        "fields": {
+            "aspiration": 2,
+            "name": "Paladino",
+            "intrinsic": "Aliados adjacentes ao digimon são curados em 5/10/20/60 no fim de seu turno"
+        }
+    },
+    {
+        "model": "tamers.Path",
+        "pk": 8,
+        "fields": {
+            "aspiration": 2,
+            "name": "Bardo",
+            "intrinsic": "Enquanto tiverem uma técnica ativa, bardos ganham vantagem nas jogadas de esquiva"
+        }
+    },
+    {
+        "model": "tamers.Path",
+        "pk": 9,
+        "fields": {
+            "aspiration": 3,
+            "name": "Ilusionista",
+            "intrinsic": "Inimigos com malefícios tem desvantagem nas jogadas de acerto contra o ilusionista"
+        }
+    },
+    {
+        "model": "tamers.Path",
+        "pk": 10,
+        "fields": {
+            "aspiration": 3,
+            "name": "Áquila",
+            "intrinsic": "O digimon tem sempre vantagem em jogadas de acerto. Se o oponente estiver em terreno mais baixo que ele, o oponente também tem desvantagem na esquiva"
+        }
+    },
+    {
+        "model": "tamers.Path",
+        "pk": 11,
+        "fields": {
+            "aspiration": 3,
+            "name": "Tecnoclasta",
+            "intrinsic": "Todos os ataques e técnicas do Tecnoclasta têm alcance infinito"
+        }
+    },
+    {
+        "model": "tamers.Path",
+        "pk": 12,
+        "fields": {
+            "aspiration": 3,
+            "name": "Valete",
+            "intrinsic": "Valetes podem cruzar casas ocupadas por oponentes. Quando o fazem, o oponente fica em desvantagem de acerto por 1 turno"
+        }
+    }
+]

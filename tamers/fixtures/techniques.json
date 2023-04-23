@@ -1,0 +1,20 @@
+[
+    {
+        "model": "tamers.Technique",
+        "pk": 1,
+        "fields": {
+            "name": "Bafo de Pimenta",
+            "description": "Lança uma pequena bola de fogo a uma distância de até 3 m, causando C4 de dano. O dano aumenta em 10 para cada vez consecutiva que bafo de pimenta acerta o oponente",
+            "cooldown": 2
+        }
+    },
+    {
+        "model": "tamers.Technique",
+        "pk": 2,
+        "fields": {
+            "name": "Destruidor de Rochas",
+            "description": "Ataca um oponente com suas garras, causando C4 de dano. O oponente fica quebrado(5) para cada vez consecutiva que destruidor de rochas o acerta",
+            "cooldown": 2
+        }
+    }
+]

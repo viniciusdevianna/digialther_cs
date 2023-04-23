@@ -1,0 +1,13 @@
+[
+    {
+        "model": "tamers.Digimon",
+        "pk": 1,
+        "fields": {
+            "name": "Agumon",
+            "aspiration": 1,
+            "path": 1,
+            "group": "R",
+            "tech": 1
+        }
+    }
+]
