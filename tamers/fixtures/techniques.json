@@ -16,5 +16,203 @@
             "description": "Ataca um oponente com suas garras, causando C4 de dano. O oponente fica quebrado(5) para cada vez consecutiva que destruidor de rochas o acerta",
             "cooldown": 2
         }
+    },
+    {
+        "model": "tamers.Technique",
+        "pk": 3,
+        "fields": {
+            "name": "Fogo Místico",
+            "description": "Disparo que causa M3 de dano em AOE(1). Tem alcance de 8 m",
+            "cooldown": 2
+        }
+    },
+    {
+        "model": "tamers.Technique",
+        "pk": 4,
+        "fields": {
+            "name": "Pena Bumerangue",
+            "description": "Disparo em linha reta que cobre 6 m e causa M3 de dano em todos que acerta. Conta como dois golpes em cada alvo",
+            "cooldown": 2
+        }
+    },
+    {
+        "model": "tamers.Technique",
+        "pk": 5,
+        "fields": {
+            "name": "Invocar",
+            "description": "Invoca um espírito que atormenta em AOE(1) por dois turnos causando E4 de dano. A invocação tem alcance infinito",
+            "cooldown": 2
+        }
+    },
+    {
+        "model": "tamers.Technique",
+        "pk": 6,
+        "fields": {
+            "name": "Garra da Tormenta",
+            "description": "Atormenta um oponente a até 3 m por dois turnos causando E3 de dano",
+            "cooldown": 2
+        }
+    },
+    {
+        "model": "tamers.Technique",
+        "pk": 7,
+        "fields": {
+            "name": "Olhos do Pesadelo",
+            "description": "Causa F4 de dano a um oponente e fica oculto para ele até o fim de seu próximo turno ou até desfazer ocultamento",
+            "cooldown": 2
+        }
+    },
+    {
+        "model": "tamers.Technique",
+        "pk": 8,
+        "fields": {
+            "name": "Dardo Seringa",
+            "description": "Causa F4 de dano a um oponente e o envenena(5)",
+            "cooldown": 2
+        }
+    },
+    {
+        "model": "tamers.Technique",
+        "pk": 9,
+        "fields": {
+            "name": "Cabeçada V",
+            "description": "Causa C4 de dano a um oponente ou C2 se o oponente estiver provocado",
+            "cooldown": 2
+        }
+    },
+    {
+        "model": "tamers.Technique",
+        "pk": 10,
+        "fields": {
+            "name": "Chama Azul",
+            "description": "Causa C4 de dano a um oponente. Se ele estiver provocado, se cura na mesma quantidade. Tem alcance de 5 m",
+            "cooldown": 2
+        }
+    },
+    {
+        "model": "tamers.Technique",
+        "pk": 11,
+        "fields": {
+            "name": "Onda de Peixes",
+            "description": "Cura M4 de dano de aliados em uma linha reta de 5 m de comprimento por 3 m de largura",
+            "cooldown": 2
+        }
+    },
+    {
+        "model": "tamers.Technique",
+        "pk": 12,
+        "fields": {
+            "name": "Choque Quente",
+            "description": "Causa M4 de dano em um oponente e cura aliados em AOE(2) a partir do oponente no mesmo valor. Tem 8 m de alcance",
+            "cooldown": 2
+        }
+    },
+    {
+        "model": "tamers.Technique",
+        "pk": 13,
+        "fields": {
+            "name": "Bolha de Ar",
+            "description": "Causa E4 de dano em AOE(1) a oponentes e expurga um malefício de aliados. Tem alcance de 8 m",
+            "cooldown": 2
+        }
+    },
+    {
+        "model": "tamers.Technique",
+        "pk": 14,
+        "fields": {
+            "name": "Uivo Filhote",
+            "description": "Restaura E5 de PD de todos os aliados e os protege de receber um malefício por um turno",
+            "cooldown": 2
+        }
+    },
+    {
+        "model": "tamers.Technique",
+        "pk": 15,
+        "fields": {
+            "name": "Ventos de Diamante",
+            "description": "Enquanto estiver ativo, concede aos aliados ao redor em AOE(2) +M4 de dano. Fica ativo por 2 turnos",
+            "cooldown": 2
+        }
+    },
+    {
+        "model": "tamers.Technique",
+        "pk": 16,
+        "fields": {
+            "name": "Cúpula Casco",
+            "description": "Cria um escudo ao redor em AOE(2) por 2 turnos, concedendo aos aliados +M4 de defesa e resistência",
+            "cooldown": 2
+        }
+    },
+    {
+        "model": "tamers.Technique",
+        "pk": 17,
+        "fields": {
+            "name": "Tentochoque",
+            "description": "Causa E4 de dano aos oponentes em AOE(2) e os deixa atordoados por 2 turnos",
+            "cooldown": 2
+        }
+    },
+    {
+        "model": "tamers.Technique",
+        "pk": 18,
+        "fields": {
+            "name": "Armadilha de Seda",
+            "description": "Imobiliza oponentes em AOE(1) e os deixa irritados. Tem alcance de 5 m",
+            "cooldown": 2
+        }
+    },
+    {
+        "model": "tamers.Technique",
+        "pk": 19,
+        "fields": {
+            "name": "Era Venenosa",
+            "description": "Imobiliza um oponente e o envenena(5). Tem alcance de 6 m",
+            "cooldown": 2
+        }
+    },
+    {
+        "model": "tamers.Technique",
+        "pk": 20,
+        "fields": {
+            "name": "Terriercóptero",
+            "description": "Suspende oponentes em AOE(1) e pode se reposicionar",
+            "cooldown": 2
+        }
+    },
+    {
+        "model": "tamers.Technique",
+        "pk": 21,
+        "fields": {
+            "name": "Engrenagem Emperrada",
+            "description": "Arremesa um dispositivo em um oponente que causa M5 de dano e o deixa atordoado. Toda vez que o oponente falhar no teste de atordoamento, ele recebe M5 de dano",
+            "cooldown": 2
+        }
+    },
+    {
+        "model": "tamers.Technique",
+        "pk": 22,
+        "fields": {
+            "name": "Arremesso Nojento",
+            "description": "Arremessa **** no oponente, diminuindo sua velocidade em 2 m e o deixando atordoado por 1 turno. O oponente também ganha desvantagem na esquiva",
+            "cooldown": 2
+        }
+    },
+    {
+        "model": "tamers.Technique",
+        "pk": 23,
+        "fields": {
+            "name": "Investida Metal",
+            "description": "Investe contra um inimigo, causando C4 de dano, empurrando-o 1 m para trás e assumindo sua posição",
+            "cooldown": 2
+        }
+    },
+    {
+        "model": "tamers.Technique",
+        "pk": 24,
+        "fields": {
+            "name": "Marcha Metálica",
+            "description": "Aumenta sua velocidade para 6 m e ganha uma ação de movimento extra não cumulativa por 2 turnos",
+            "cooldown": 2
+        }
     }
 ]

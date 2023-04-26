@@ -9,5 +9,258 @@
             "group": "R",
             "tech": 1
         }
+    },
+    {
+        "model": "tamers.Digimon",
+        "pk": 2,
+        "fields": {
+            "name": "Guilmon",
+            "aspiration": 1,
+            "path": 1,
+            "group": "R",
+            "tech": 2
+        }
+    },
+    {
+        "model": "tamers.Digimon",
+        "pk": 3,
+        "fields": {
+            "name": "Biyomon",
+            "aspiration": 1,
+            "path": 2,
+            "group": "R",
+            "tech": 3
+        }
+    },
+    {
+        "model": "tamers.Digimon",
+        "pk": 4,
+        "fields": {
+            "name": "Hawkmon",
+            "aspiration": 1,
+            "path": 2,
+            "group": "R",
+            "tech": 4
+        }
+    },
+    {
+        "model": "tamers.Digimon",
+        "pk": 5,
+        "fields": {
+            "name": "Impmon",
+            "aspiration": 1,
+            "path": 3,
+            "group": "P",
+            "tech": 5
+        }
+    },
+    {
+        "model": "tamers.Digimon",
+        "pk": 6,
+        "fields": {
+            "name": "Gazimon",
+            "aspiration": 1,
+            "path": 3,
+            "group": "P",
+            "tech": 6
+        }
+    },
+    {
+        "model": "tamers.Digimon",
+        "pk": 7,
+        "fields": {
+            "name": "Dracmon",
+            "aspiration": 1,
+            "path": 4,
+            "group": "P",
+            "tech": 7
+        }
+    },
+    {
+        "model": "tamers.Digimon",
+        "pk": 8,
+        "fields": {
+            "name": "Demidevimon",
+            "aspiration": 1,
+            "path": 4,
+            "group": "P",
+            "tech": 8
+        }
+    },
+    {
+        "model": "tamers.Digimon",
+        "pk": 9,
+        "fields": {
+            "name": "Veemon",
+            "aspiration": 2,
+            "path": 5,
+            "group": "B",
+            "tech": 9
+        }
+    },
+    {
+        "model": "tamers.Digimon",
+        "pk": 10,
+        "fields": {
+            "name": "Gabumon",
+            "aspiration": 2,
+            "path": 5,
+            "group": "B",
+            "tech": 10
+        }
+    },
+    {
+        "model": "tamers.Digimon",
+        "pk": 11,
+        "fields": {
+            "name": "Gomamon",
+            "aspiration": 2,
+            "path": 6,
+            "group": "B",
+            "tech": 11
+        }
+    },
+    {
+        "model": "tamers.Digimon",
+        "pk": 12,
+        "fields": {
+            "name": "Betamon",
+            "aspiration": 2,
+            "path": 6,
+            "group": "B",
+            "tech": 12
+        }
+    },
+    {
+        "model": "tamers.Digimon",
+        "pk": 13,
+        "fields": {
+            "name": "Patamon",
+            "aspiration": 2,
+            "path": 7,
+            "group": "Y",
+            "tech": 13
+        }
+    },
+    {
+        "model": "tamers.Digimon",
+        "pk": 14,
+        "fields": {
+            "name": "Salamon",
+            "aspiration": 2,
+            "path": 7,
+            "group": "Y",
+            "tech": 14
+        }
+    },
+    {
+        "model": "tamers.Digimon",
+        "pk": 15,
+        "fields": {
+            "name": "Renamon",
+            "aspiration": 2,
+            "path": 8,
+            "group": "Y",
+            "tech": 15
+        }
+    },
+    {
+        "model": "tamers.Digimon",
+        "pk": 16,
+        "fields": {
+            "name": "Armadillomon",
+            "aspiration": 2,
+            "path": 8,
+            "group": "Y",
+            "tech": 16
+        }
+    },
+    {
+        "model": "tamers.Digimon",
+        "pk": 17,
+        "fields": {
+            "name": "Tentomon",
+            "aspiration": 3,
+            "path": 9,
+            "group": "G",
+            "tech": 17
+        }
+    },
+    {
+        "model": "tamers.Digimon",
+        "pk": 18,
+        "fields": {
+            "name": "Wormmon",
+            "aspiration": 3,
+            "path": 9,
+            "group": "G",
+            "tech": 18
+        }
+    },
+    {
+        "model": "tamers.Digimon",
+        "pk": 19,
+        "fields": {
+            "name": "Palmon",
+            "aspiration": 3,
+            "path": 10,
+            "group": "G",
+            "tech": 19
+        }
+    },
+    {
+        "model": "tamers.Digimon",
+        "pk": 20,
+        "fields": {
+            "name": "Terriermon",
+            "aspiration": 3,
+            "path": 10,
+            "group": "G",
+            "tech": 20
+        }
+    },
+    {
+        "model": "tamers.Digimon",
+        "pk": 21,
+        "fields": {
+            "name": "Hagurumon",
+            "aspiration": 3,
+            "path": 11,
+            "group": "L",
+            "tech": 21
+        }
+    },
+    {
+        "model": "tamers.Digimon",
+        "pk": 22,
+        "fields": {
+            "name": "Numemon",
+            "aspiration": 3,
+            "path": 11,
+            "group": "L",
+            "tech": 22
+        }
+    },
+    {
+        "model": "tamers.Digimon",
+        "pk": 23,
+        "fields": {
+            "name": "Dorumon",
+            "aspiration": 3,
+            "path": 12,
+            "group": "L",
+            "tech": 23
+        }
+    },
+    {
+        "model": "tamers.Digimon",
+        "pk": 24,
+        "fields": {
+            "name": "Commandramon",
+            "aspiration": 3,
+            "path": 12,
+            "group": "L",
+            "tech": 24
+        }
     }
 ]

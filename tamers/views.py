@@ -62,6 +62,28 @@ class ListCharacterPlayer(generics.ListAPIView):
     
     serializer_class = ListCharacterPlayerSerializer
 
+class AttributesViewSet(viewsets.ModelViewSet):
+
+    queryset = Attribute.objects.all()
+    serializer_class = AttributeSerializer
+
+class ListAttributesCharacter(generics.ListAPIView):
+    def get_queryset(self):
+        return Attribute.objects.filter(character=self.kwargs['pk'])
+    
+    serializer_class = ListAttributeCharacterSerializer
+
+class StatsViewSet(viewsets.ModelViewSet):
+
+    queryset = Stat.objects.all()
+    serializer_class = StatSerializer
+
+class ListStatsCharacter(generics.ListAPIView):
+    def get_queryset(self):
+        return Stat.objects.filter(character=self.kwargs['pk'])
+    
+    serializer_class = ListStatCharacterSerializer
+
 class AvailableFormViewSet(viewsets.ModelViewSet):
     def get_queryset(self):
         return AvailableForm.objects.get(character=self.kwargs['pk'])

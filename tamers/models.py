@@ -28,45 +28,11 @@ class Path(models.Model):
     def __str__(self):
         return self.name
 
-class Attribute(models.Model):
-
-    class Category(models.TextChoices):
-        BODY = 'C', _('Corpo')
-        MIND = 'M', _('Mente')
-        FOCUS = 'F', _('Foco')
-        SPIRIT = 'E', _('Espírito')
-        SOCIAL = 'S', _('Social')
-        NATURE = 'N', _('Natureza')
-
-    category = models.CharField(max_length=1, choices=Category.choices)
-    current_value = models.PositiveIntegerField(default=0)
-    total_value = models.PositiveIntegerField(default=0)
-    training_level = models.IntegerField(default=0)
-
-    def __str__(self):
-        return self.category
-
-class Stat(models.Model):
-
-    class Category(models.TextChoices):
-        DEFENSE = 'D', _('Defesa')
-        RESIST = 'R', _('Resistência')
-        BALANCE = 'B', _('Equilíbrio')
-        ACCURACY = 'A', _('Acerto')
-        EVASION = 'E', _('Esquiva')
-
-    category = models.CharField(max_length=1, choices=Category.choices)
-    total_value = models.IntegerField(default=0)
-    current_value = models.IntegerField(default=0)
-    dice = models.PositiveIntegerField(default=0)
-
-    def __str__(self):
-        return self.category
-
 class Technique(models.Model):
     name = models.CharField(max_length=200)
     description = models.CharField(max_length=1000)
     cooldown = models.PositiveIntegerField(default=0)
+    cost = models.PositiveIntegerField(default=0)
 
     def __str__(self):
         return self.name
@@ -131,8 +97,8 @@ class Character(models.Model):
     age = models.PositiveIntegerField()
     weight = models.DecimalField(decimal_places=2, max_digits=5)
     height = models.DecimalField(decimal_places=2, max_digits=3)
-    inventory = models.CharField(max_length=1000)
-    annotations = models.CharField(max_length=1000)
+    inventory = models.CharField(max_length=1000, blank=True)
+    annotations = models.CharField(max_length=1000, blank=True)
 
     digimon = models.ForeignKey(Digimon, on_delete=models.SET_NULL, null=True)
 
@@ -141,36 +107,9 @@ class Character(models.Model):
     total_xp = models.PositiveIntegerField(default=0)
     pd = models.PositiveIntegerField(default=0)
 
-    body = models.ForeignKey(Attribute, on_delete=models.SET_NULL, null=True, related_name='+')
-    mind = models.ForeignKey(Attribute, on_delete=models.SET_NULL, null=True, related_name='+')
-    focus = models.ForeignKey(Attribute, on_delete=models.SET_NULL, null=True, related_name='+')
-    spirit = models.ForeignKey(Attribute, on_delete=models.SET_NULL, null=True, related_name='+')
-    social = models.ForeignKey(Attribute, on_delete=models.SET_NULL, null=True, related_name='+')
-    nature = models.ForeignKey(Attribute, on_delete=models.SET_NULL, null=True, related_name='+')
-    attributes = {
-        'body': body,
-        'mind': mind,
-        'focus': focus,
-        'spirit': spirit,
-        'social': social,
-        'nature': nature
-    }
-
     total_lp = models.IntegerField(default=0)
     current_lp = models.IntegerField(default=0)
     temp_lp = models.IntegerField(default=0)
-    defense = models.ForeignKey(Stat, on_delete=models.SET_NULL, null=True, related_name='+')
-    resist = models.ForeignKey(Stat, on_delete=models.SET_NULL, null=True, related_name='+')
-    balance = models.ForeignKey(Stat, on_delete=models.SET_NULL, null=True, related_name='+')
-    accuracy = models.ForeignKey(Stat, on_delete=models.SET_NULL, null=True, related_name='+')
-    evasion = models.ForeignKey(Stat, on_delete=models.SET_NULL, null=True, related_name='+')
-    stats = {
-        'defense': defense,
-        'resist': resist,
-        'balance': balance,
-        'accuracy': accuracy,
-        'evasion': evasion
-    }
 
     def __str__(self):
         return self.name
@@ -190,6 +129,55 @@ class Character(models.Model):
             raise ValueError('Você não tem experiência suficiente para esta operação')
         else:
             self.current_xp -= xp_value
+
+    def get_attributes(self):
+        attributes = Attribute.objects.filter(character=self.pk)
+        if not attributes:
+            raise ValueError('Não há atributos criados para essa personagem')
+        return {attribute.category.label: attribute for attribute in attributes}
+    
+    def get_stats(self):
+        stats = Stat.objects.filter(character=self.pk)
+        if not stats:
+            raise ValueError('Não há stats criados para essa personagem')
+        return {stat.category.label: stat for stat in stats}
+
+class Attribute(models.Model):
+
+    class Category(models.TextChoices):
+        BODY = 'C', _('Corpo')
+        MIND = 'M', _('Mente')
+        FOCUS = 'F', _('Foco')
+        SPIRIT = 'E', _('Espírito')
+        SOCIAL = 'S', _('Social')
+        NATURE = 'N', _('Natureza')
+
+    character = models.ForeignKey(Character, on_delete=models.CASCADE)
+    category = models.CharField(max_length=1, choices=Category.choices)
+    current_value = models.PositiveIntegerField(default=0)
+    total_value = models.PositiveIntegerField(default=0)
+    training_level = models.IntegerField(default=0)
+
+    def __str__(self):
+        return self.category
+
+class Stat(models.Model):
+
+    class Category(models.TextChoices):
+        DEFENSE = 'D', _('Defesa')
+        RESIST = 'R', _('Resistência')
+        BALANCE = 'B', _('Equilíbrio')
+        ACCURACY = 'A', _('Acerto')
+        EVASION = 'E', _('Esquiva')
+
+    character = models.ForeignKey(Character, on_delete=models.CASCADE)
+    category = models.CharField(max_length=1, choices=Category.choices)
+    total_value = models.IntegerField(default=0)
+    current_value = models.IntegerField(default=0)
+    dice = models.PositiveIntegerField(default=0)
+
+    def __str__(self):
+        return self.category
 
 class AvailableForm(models.Model):
 

@@ -8,6 +8,8 @@ router.register('digimon', views.DigimonViewSet, basename='digimon')
 router.register('evolution', views.EvolutionFormsViewSet, basename='evolution')
 router.register('characters', views.CharactersViewSet, basename='characters')
 router.register('techniques', views.TechniquesViewSet, basename='techniques')
+router.register('attributes', views.AttributesViewSet, basename='attributes')
+router.register('stats', views.StatsViewSet, basename='stats')
 
 urlpatterns = [
     path('', include(router.urls)),
@@ -19,4 +21,6 @@ urlpatterns = [
     path('player/characters/<int:pk>/', views.ListCharacterPlayer.as_view()),
     path('character/<int:pk>/evolution/', views.AvailableFormViewSet.as_view({'get': 'list'}), name='available_forms'),
     path('character/<int:pk>/tech/', views.AvailableTechniqueViewSet.as_view({'get': 'list'}), name='available_tech'),
+    path('character/<int:pk>/attributes/', views.ListAttributesCharacter.as_view(), name='char_attributes'),
+    path('character/<int:pk>/stats/', views.ListStatsCharacter.as_view(), name='char_stats'),
 ]

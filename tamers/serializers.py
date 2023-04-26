@@ -2,9 +2,15 @@ from rest_framework import serializers
 from .models import *
 
 class PlayerSerializer(serializers.ModelSerializer):
+    password = serializers.CharField(write_only=True)
+
     class Meta:
         model = Player
-        fields = ['id', 'username', 'email']
+        fields = ['id', 'username', 'email', 'password']
+
+    def create(self, validated_data):
+        player = Player.objects.create_user(**validated_data)
+        return player
 
 class ListAspirationSerializer(serializers.ModelSerializer):
     class Meta:
@@ -24,17 +30,27 @@ class ListPathAspirationSerializer(serializers.ModelSerializer):
 class AttributeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Attribute
-        fields = ['id', 'category', 'current_value', 'total_value', 'training_level']
+        fields = ['character', 'category', 'current_value', 'total_value', 'training_level']
+
+class ListAttributeCharacterSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Attribute
+        fields = ['category', 'current_value', 'total_value', 'training_level']
 
 class StatSerializer(serializers.ModelSerializer):
     class Meta:
         model = Stat
-        fields = ['id', 'category', 'current_value', 'total_value', 'dice']
+        fields = ['character', 'category', 'current_value', 'total_value', 'dice']
+
+class ListStatCharacterSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Stat
+        fields = ['category', 'current_value', 'total_value', 'dice']
 
 class TechniqueSerializer(serializers.ModelSerializer):
     class Meta:
         model = Technique
-        fields = ['id', 'name', 'description', 'cooldown']
+        fields = ['id', 'name', 'description', 'cooldown', 'cost']
 
 class DigimonSerializer(serializers.ModelSerializer):
     class Meta:
@@ -74,12 +90,10 @@ class CharacterSerializer(serializers.ModelSerializer):
             'level',
             'current_xp',
             'total_xp',
-            'pd',
-            'attributes',
+            'pd',            
             'current_lp',
             'total_lp',
             'temp_lp',
-            'stats'
         ]
 
 class ListCharacterPlayerSerializer(serializers.ModelSerializer):
